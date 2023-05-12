@@ -127,7 +127,7 @@ foreach ($result as $row) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Ảnh </label>
+							<label for="" class="col-sm-2 control-label">Chọn </label>
 							<div class="col-sm-6" style="padding-top:5px">
 								<input type="file" name="photo">(Chỉ được phép sử dụng jpg, jpeg, gif và png)
 							</div>
