@@ -29,7 +29,7 @@ foreach ($result as $row) {
                     <img src="./assets/uploads/slider-11.jpg">
                 </div>
                 <p>
-                    Lorem Ipsum is simply dummy tsext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <div>
                     <img src="./assets/uploads/slider-12.jpg">
@@ -41,7 +41,7 @@ foreach ($result as $row) {
                 <img src="./assets/uploads/slider-13.jpg">
                 </div>
                 <p style="text-align: center">
-                    CẢM ƠN VÌ ĐÃ TIN TƯỞNG CHÚNG TÔI
+                    CẢM ƠN VÌ ĐÃ TIN TƯỞNG CHÚNG TÔI!
                 </p>
             </div>
         </div>
