@@ -1,4 +1,6 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php'); 
+?>
+
 
 <?php
 $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
@@ -134,12 +136,11 @@ if (!isset($_REQUEST['id']) || !isset($_REQUEST['type'])) {
             </div>
             <div class="col-md-9">
 
-                <h3><?php echo $title; ?>"</h3>
+                <h3><?php echo $title; ?></h3>
                 <div class="product product-cat">
 
                     <div class="row">
                         <?php
-                        // Checking if any product is available or not
                         $prod_count = 0;
                         $statement = $pdo->prepare("SELECT * FROM tbl_product");
                         $statement->execute();
