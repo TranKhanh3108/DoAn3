@@ -5,7 +5,7 @@
 		<h1>View Products</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="product-add.php" class="btn btn-primary btn-sm">Add Product</a>
+		<a href="product-add.php" class="btn btn-primary btn-sm">thêm mới</a>
 	</div>
 </section>
 
@@ -18,11 +18,11 @@
 						<thead>
 							<tr>
 								<th width="30">SL</th>
-								<th>Photo</th>
-								<th width="200">Product Name</th>
-								<th width="60">Old Price</th>
-								<th width="60">Current Price</th>
-								<th width="60">Quantity</th>
+								<th>ảnh</th>
+								<th width="200">tên sản phẩm</th>
+								<th width="60">giá cũ</th>
+								<th width="60">giá hiện tại</th>
+								<th width="60">số lượng</th>
 								<th>Is Featured?</th>
 								<th>Is Active?</th>
 								<th>Category</th>
@@ -82,8 +82,8 @@
 									</td>
 									<td><?php echo $row['tcat_name']; ?><br><?php echo $row['mcat_name']; ?><br><?php echo $row['ecat_name']; ?></td>
 									<td>										
-										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>  
 									</td>
 								</tr>
 								<?php

@@ -5,7 +5,7 @@
 		<h1>View End Level Categories</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="end-category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="end-category-add.php" class="btn btn-primary btn-sm">thêm mới</a>
 	</div>
 </section>
 
@@ -51,8 +51,8 @@
                         <td><?php echo $row['mcat_name']; ?></td>
                         <td><?php echo $row['tcat_name']; ?></td>
 	                    <td>
-	                        <a href="end-category-edit.php?id=<?php echo $row['ecat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="end-category-delete.php?id=<?php echo $row['ecat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="end-category-edit.php?id=<?php echo $row['ecat_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="end-category-delete.php?id=<?php echo $row['ecat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>
 	                    </td>
 	                </tr>
             		<?php
