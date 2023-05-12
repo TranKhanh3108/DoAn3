@@ -47,8 +47,6 @@ foreach ($result as $row)
         }
         ?>
     </ol>
-
-   
     <div class="carousel-inner" role="listbox">
 
         <?php
