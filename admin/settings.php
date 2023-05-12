@@ -1,90 +1,6 @@
 <?php require_once('header.php'); ?>
 
 <?php
-//Change Logo
-/* if(isset($_POST['form1'])) {
-    $valid = 1;
-
-    $path = $_FILES['photo_logo']['name'];
-    $path_tmp = $_FILES['photo_logo']['tmp_name'];
-
-    if($path == '') {
-        $valid = 0;
-        $error_message .= 'You must have to select a photo<br>';
-    } else {
-        $ext = pathinfo( $path, PATHINFO_EXTENSION );
-        $file_name = basename( $path, '.' . $ext );
-        if( $ext!='jpg' && $ext!='png' && $ext!='jpeg' && $ext!='gif' ) {
-            $valid = 0;
-            $error_message .= 'You must have to upload jpg, jpeg, gif or png file<br>';
-        }
-    }
-
-    if($valid == 1) {
-        // removing the existing photo
-        $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);                           
-        foreach ($result as $row) {
-            $logo = $row['logo'];
-            unlink('../assets/uploads/'.$logo);
-        }
-
-        // updating the data
-        $final_name = 'logo'.'.'.$ext;
-        move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
-
-        // updating the database
-        $statement = $pdo->prepare("UPDATE tbl_settings SET logo=? WHERE id=1");
-        $statement->execute(array($final_name));
-
-        $success_message = 'Logo is updated successfully.';
-        
-    }
-}
-
-// Change Favicon
-if(isset($_POST['form2'])) {
-    $valid = 1;
-
-    $path = $_FILES['photo_favicon']['name'];
-    $path_tmp = $_FILES['photo_favicon']['tmp_name'];
-
-    if($path == '') {
-        $valid = 0;
-        $error_message .= 'You must have to select a photo<br>';
-    } else {
-        $ext = pathinfo( $path, PATHINFO_EXTENSION );
-        $file_name = basename( $path, '.' . $ext );
-        if( $ext!='jpg' && $ext!='png' && $ext!='jpeg' && $ext!='gif' ) {
-            $valid = 0;
-            $error_message .= 'You must have to upload jpg, jpeg, gif or png file<br>';
-        }
-    }
-
-    if($valid == 1) {
-        // removing the existing photo
-        $statement = $pdo->prepare("SELECT * FROM tbl_settings WHERE id=1");
-        $statement->execute();
-        $result = $statement->fetchAll(PDO::FETCH_ASSOC);                           
-        foreach ($result as $row) {
-            $favicon = $row['favicon'];
-            unlink('../assets/uploads/'.$favicon);
-        }
-
-        // updating the data
-        $final_name = 'favicon'.'.'.$ext;
-        move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
-
-        // updating the database
-        $statement = $pdo->prepare("UPDATE tbl_settings SET favicon=? WHERE id=1");
-        $statement->execute(array($final_name));
-
-        $success_message = 'Favicon is updated successfully.';
-        
-    }
-}
-*/
 //Footer & Contact us page
 if(isset($_POST['form3'])) {
     
@@ -897,7 +813,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-2 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form3">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form3">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -939,7 +855,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-5">
-                                            <button type="submit" class="btn btn-success pull-left" name="form4">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form4">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -999,7 +915,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-4 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form5">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form5">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1086,7 +1002,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6_0">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6_0">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1119,7 +1035,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1144,7 +1060,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6_4">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6_4">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1171,7 +1087,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6_5">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6_5">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1198,7 +1114,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6_6">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6_6">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1217,7 +1133,7 @@ foreach ($result as $row) {
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label"></label>
                                         <div class="col-sm-6">
-                                            <button type="submit" class="btn btn-success pull-left" name="form6_3">Update</button>
+                                            <button type="submit" class="btn btn-success pull-left" name="form6_3">cập nhật</button>
                                         </div>
                                     </div>
                                 </div>
