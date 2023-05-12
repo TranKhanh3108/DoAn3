@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Products</h1>
+		<h1>Danh sách mặt hàng</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="product-add.php" class="btn btn-primary btn-sm">thêm mới</a>
+		<a href="product-add.php" class="btn btn-primary btn-sm">Thêm mặt hàng</a>
 	</div>
 </section>
 
@@ -18,15 +18,15 @@
 						<thead>
 							<tr>
 								<th width="30">SL</th>
-								<th>ảnh</th>
-								<th width="200">tên sản phẩm</th>
-								<th width="60">giá cũ</th>
-								<th width="60">giá hiện tại</th>
-								<th width="60">số lượng</th>
-								<th>Is Featured?</th>
-								<th>Is Active?</th>
-								<th>Category</th>
-								<th width="80">Action</th>
+								<th>Ảnh</th>
+								<th width="200">Tên sản phẩm</th>
+								<th width="60">Giá gốc</th>
+								<th width="60">Giá hiện tại</th>
+								<th width="60">Số lượng</th>
+								<th>Được nổi bật?</th>
+								<th>Đang bày bán?</th>
+								<th>Danh mục</th>
+								<th width="80">Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -82,8 +82,8 @@
 									</td>
 									<td><?php echo $row['tcat_name']; ?><br><?php echo $row['mcat_name']; ?><br><?php echo $row['ecat_name']; ?></td>
 									<td>										
-										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>  
+										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>  
 									</td>
 								</tr>
 								<?php
@@ -103,15 +103,15 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Xác nhận xóa</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! This product will be deleted from the order table, payment table, size table, color table and rating table also.</p>
+                <p>Bạn có chắc muốn xóa mục này?</p>
+                <p style="color:red;">Cảnh báo! mục này sẽ bị xóa khỏi tất cả các bảng dữ liệu!</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>
