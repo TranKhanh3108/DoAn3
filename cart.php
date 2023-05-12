@@ -80,7 +80,7 @@ if(isset($_POST['form1'])) {
 			<div class="col-md-12">
 
                 <?php if(!isset($_SESSION['cart_p_id'])): ?>
-                    <?php echo 'Cart is empty'; ?>
+                    <?php echo 'Giỏ hàng đang trống!'; ?>
                 <?php else: ?>
                 <form action="" method="post">
                     <?php $csrf->echoInputField(); ?>

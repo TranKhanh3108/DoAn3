@@ -19,7 +19,7 @@ foreach ($result as $row) {
 }
 ?>
 
-<div class="page-banner" style="background-image: url(assets/uploads/<?php echo $contact_banner; ?>);">
+<div class="page-banner" style="background-image: url(assets/uploads/about-banner.jpg)  ">
     <div class="inner">
         <h1><?php echo $contact_title; ?></h1>
     </div>
@@ -35,7 +35,7 @@ foreach ($result as $row) {
                         <div class="well well-sm">
                             
                             <?php
-// After form submit checking everything for email sending
+
 if(isset($_POST['form_contact']))
 {
     $error_message = '';
@@ -68,7 +68,7 @@ if(isset($_POST['form_contact']))
     if(empty($_POST['visitor_email']))
     {
         $valid = 0;
-        $error_message .= 'Hãy nhập đianj chỉ email.\n';
+        $error_message .= 'Hãy nhập địa chỉ email.\n';
     }
     else
     {
@@ -124,8 +124,7 @@ if(isset($_POST['form_contact']))
                    'X-Mailer: PHP/' . phpversion() . "\r\n" . 
                    "MIME-Version: 1.0\r\n" . 
                    "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-        // Sending email to admin                  
+                
         mail($to_admin, $subject, $message, $headers); 
         
         $success_message = $receive_email_thank_you_message;
@@ -150,25 +149,25 @@ if(isset($_POST['form_contact']))
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name">Tên</label>
-                                        <input type="text" class="form-control" name="visitor_name" placeholder="Enter name">
+                                        <input type="text" class="form-control" name="visitor_name" placeholder="Nhập tên">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" name="visitor_email" placeholder="Enter email address">
+                                        <input type="email" class="form-control" name="visitor_email" placeholder="Nhập địa chỉ Email">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Số điện thoại</label>
-                                        <input type="text" class="form-control" name="visitor_phone" placeholder="Enter phone number">
+                                        <input type="text" class="form-control" name="visitor_phone" placeholder="Nhập số điện thoại">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="name">Tin nhắn</label>
-                                        <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Enter message"></textarea>
+                                        <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Tin nhắn mà bạn muốn gửi!"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <input type="submit" value="Send Message" class="btn btn-primary pull-right" name="form_contact">
+                                    <input type="submit" value="Hoàn thành" class="btn btn-primary pull-right" name="form_contact">
                                 </div>
                             </div>
                             </form>
@@ -180,11 +179,11 @@ if(isset($_POST['form_contact']))
                             <?php echo nl2br($contact_address); ?>
                         </address>
                         <address>
-                            <strong>Số điện thoại:</strong><br>
+                            <strong>Số điện thoại: 0123456789</strong><br>
                             <span><?php echo $contact_phone; ?></span>
                         </address>
                         <address>
-                            <strong>Email:</strong><br>
+                            <strong>Email: metaino@gmail.com</strong><br>
                             <a href="mailto:<?php echo $contact_email; ?>"><span><?php echo $contact_email; ?></span></a>
                         </address>
                     </div>

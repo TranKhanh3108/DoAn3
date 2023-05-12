@@ -85,7 +85,7 @@ if (isset($_POST['form1'])) {
         $cust_datetime = date('Y-m-d h:i:s');
         $cust_timestamp = time();
 
-        // saving into the database
+
         $statement = $pdo->prepare("INSERT INTO tbl_customer (
                                         cust_name,
                                         cust_cname,
@@ -272,7 +272,7 @@ if (isset($_POST['form1'])) {
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for=""></label>
-                                    <input type="submit" class="btn btn-primary" value="Đăng ký" name="form1">
+                                    <input type="submit" style="background-color: #023401;" class="btn btn-primary" value="Đăng ký" name="form1">
                                 </div>
                             </div>
                         </div>                        

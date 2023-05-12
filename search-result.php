@@ -21,7 +21,7 @@ foreach ($result as $row) {
 }
 ?>
 
-<div class="page-banner" style="background-image: url(assets/uploads/<?php echo $banner_search; ?>);">
+<div class="page-banner" style="background-image: url(assets/uploads/about-banner.jpg)">
     <div class="overlay"></div>
     <div class="inner">
         <h1>
@@ -140,7 +140,6 @@ foreach ($result as $row) {
                     $pagination.= "<span class=\"disabled\">next &#187;</span>";
                 $pagination.= "</div>\n";       
             }
-            /* ===================== Pagination Code Ends ================== */
             ?>
 
                         <?php
@@ -159,90 +158,21 @@ foreach ($result as $row) {
                                         <div class="text">
                                             <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                             <h4>
-                                                $<?php echo $row['p_current_price']; ?> 
-                                                <?php if($row['p_old_price'] != ''): ?>
+                                                <?php echo $row['p_current_price']; ?>đ
+                                                <?php if($row['p_old_price'] != ''): ?>đ
                                                 <del>
-                                                    $<?php echo $row['p_old_price']; ?>
+                                                    <?php echo $row['p_old_price']; ?>đ
                                                 </del>
                                                 <?php endif; ?>
-                                            </h4>
-                                            <div class="rating">
-                                                <?php
-                                                $t_rating = 0;
-                                                $statement1 = $pdo->prepare("SELECT * FROM tbl_rating WHERE p_id=?");
-                                                $statement1->execute(array($row['p_id']));
-                                                $tot_rating = $statement1->rowCount();
-                                                if($tot_rating == 0) {
-                                                    $avg_rating = 0;
-                                                } else {
-                                                    $result1 = $statement1->fetchAll(PDO::FETCH_ASSOC);
-                                                    foreach ($result1 as $row1) {
-                                                        $t_rating = $t_rating + $row1['rating'];
-                                                    }
-                                                    $avg_rating = $t_rating / $tot_rating;
-                                                }
-                                                ?>
-                                                <?php
-                                                if($avg_rating == 0) {
-                                                    echo '';
-                                                }
-                                                elseif($avg_rating == 1.5) {
-                                                    echo '
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    ';
-                                                } 
-                                                elseif($avg_rating == 2.5) {
-                                                    echo '
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    ';
-                                                }
-                                                elseif($avg_rating == 3.5) {
-                                                    echo '
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                    ';
-                                                }
-                                                elseif($avg_rating == 4.5) {
-                                                    echo '
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-o"></i>
-                                                    ';
-                                                }
-                                                else {
-                                                    for($i=1;$i<=5;$i++) {
-                                                        ?>
-                                                        <?php if($i>$avg_rating): ?>
-                                                            <i class="fa fa-star-o"></i>
-                                                        <?php else: ?>
-                                                            <i class="fa fa-star"></i>
-                                                        <?php endif; ?>
-                                                        <?php
-                                                    }
-                                                }
-                                                ?>
-                                            </div>
+                                            </h4>                                      
                                             <?php if($row['p_qty'] == 0): ?>
                                                 <div class="out-of-stock">
                                                     <div class="inner">
-                                                        Out Of Stock
+                                                        Hết hàng!
                                                     </div>
                                                 </div>
                                             <?php else: ?>
-                                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">thêm vào giỏ hàng</a></p>
+                                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Thêm vào giỏ hàng</a></p>
                                             <?php endif; ?>
                                         </div>
                                     </div>
