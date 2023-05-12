@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Mid Level Categories</h1>
+		<h1>Danh sách loại mặt hàng phụ</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="mid-category-add.php" class="btn btn-primary btn-sm">thêm mới</a>
+		<a href="mid-category-add.php" class="btn btn-primary btn-sm">Thêm loại</a>
 	</div>
 </section>
 
@@ -23,9 +23,9 @@
 			<thead>
 			    <tr>
 			        <th>SL</th>
-			        <th>Mid Level Category Name</th>
-                    <th>Top Level Category Name</th>
-			        <th>Action</th>
+			        <th>Loại mặt hàng phụ</th>
+                    <th>Loại mặt hàng chính</th>
+			        <th>Hành động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -46,8 +46,8 @@
 	                    <td><?php echo $row['mcat_name']; ?></td>
                         <td><?php echo $row['tcat_name']; ?></td>
 	                    <td>
-	                        <a href="mid-category-edit.php?id=<?php echo $row['mcat_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="mid-category-delete.php?id=<?php echo $row['mcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>
+	                        <a href="mid-category-edit.php?id=<?php echo $row['mcat_id']; ?>" class="btn btn-primary btn-xs">Sửa</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="mid-category-delete.php?id=<?php echo $row['mcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Xóa</a>
 	                    </td>
 	                </tr>
             		<?php
@@ -67,15 +67,15 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Xác nhận xóa</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! All products and end level categories under this mid level category will be deleted from all the tables like order table, payment table, size table, color table, rating table etc.</p>
+                <p>Bạn có chắc muốn xóa mục này?</p>
+                <p style="color:red;">Cảnh báo!, tất cả mặt hàng và loại mặt hàng liên quan của mục sẽ bị xóa khỏi tất cả table!.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>
