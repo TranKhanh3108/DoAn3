@@ -49,18 +49,18 @@ if(isset($_POST['form1'])) {
         }
         if($table_quantity[$temp_index] < $arr2[$i]) {
         	$allow_update = 0;
-            $error_message .= '"'.$arr2[$i].'" items are not available for "'.$arr3[$i].'"\n';
+            $error_message .= '"'.$arr2[$i].'" Mặt hàng không có sẵn "'.$arr3[$i].'"\n';
         } else {
             $_SESSION['cart_p_qty'][$i] = $arr2[$i];
         }
     }
-    $error_message .= '\nOther items quantity are updated successfully!';
+    $error_message .= '\nSố lượng các mặt hàng khác đã được update!';
     ?>
     
     <?php if($allow_update == 0): ?>
     	<script>alert('<?php echo $error_message; ?>');</script>
 	<?php else: ?>
-		<script>alert('All Items Quantity Update is Successful!');</script>
+		<script>alert('Số lượng mặt hàng đã được update!');</script>
 	<?php endif; ?>
     <?php
 
@@ -70,7 +70,7 @@ if(isset($_POST['form1'])) {
 <div class="page-banner" style="background-image: url(assets/uploads/<?php echo $banner_cart; ?>)">
     <div class="overlay"></div>
     <div class="page-banner-inner">
-        <h1><?php echo LANG_VALUE_18; ?></h1>
+        <h1>Giỏ hàng</h1>
     </div>
 </div>
 
@@ -87,15 +87,15 @@ if(isset($_POST['form1'])) {
 				<div class="cart">
                     <table class="table table-responsive">
                         <tr>
-                            <th><?php echo LANG_VALUE_7; ?></th>
-                            <th><?php echo LANG_VALUE_8; ?></th>
-                            <th><?php echo LANG_VALUE_47; ?></th>
-                            <th><?php echo LANG_VALUE_157; ?></th>
-                            <th><?php echo LANG_VALUE_158; ?></th>
-                            <th><?php echo LANG_VALUE_159; ?></th>
-                            <th><?php echo LANG_VALUE_55; ?></th>
-                            <th class="text-right"><?php echo LANG_VALUE_82; ?></th>
-                            <th class="text-center" style="width: 100px;"><?php echo LANG_VALUE_83; ?></th>
+                            <th>STT</th>
+                            <th>Ảnh</th>
+                            <th>Mặt hàng</th>
+                            <th>Kích thước</th>
+                            <th>Màu sắc</th>
+                            <th>Giá thành</th>
+                            <th>Số lượng</th>
+                            <th class="text-right">Thành tiền</th>
+                            <th class="text-center" style="width: 100px;">Chỉnh sửa</th>
                         </tr>
                         <?php
                         $table_total_price = 0;
@@ -172,7 +172,7 @@ if(isset($_POST['form1'])) {
                             <td><?php echo $arr_cart_p_name[$i]; ?></td>
                             <td><?php echo $arr_cart_size_name[$i]; ?></td>
                             <td><?php echo $arr_cart_color_name[$i]; ?></td>
-                            <td><?php echo LANG_VALUE_1; ?><?php echo $arr_cart_p_current_price[$i]; ?></td>
+                            <td><?php echo $arr_cart_p_current_price[$i]; ?> VNĐ</td>
                             <td>
                                 <input type="hidden" name="product_id[]" value="<?php echo $arr_cart_p_id[$i]; ?>">
                                 <input type="hidden" name="product_name[]" value="<?php echo $arr_cart_p_name[$i]; ?>">
@@ -183,7 +183,7 @@ if(isset($_POST['form1'])) {
                                 $row_total_price = $arr_cart_p_current_price[$i]*$arr_cart_p_qty[$i];
                                 $table_total_price = $table_total_price + $row_total_price;
                                 ?>
-                                <?php echo LANG_VALUE_1; ?><?php echo $row_total_price; ?>
+                                <?php echo $row_total_price; ?>.000 VNĐ
                             </td>
                             <td class="text-center">
                                 <a onclick="return confirmDelete();" href="cart-item-delete.php?id=<?php echo $arr_cart_p_id[$i]; ?>&size=<?php echo $arr_cart_size_id[$i]; ?>&color=<?php echo $arr_cart_color_id[$i]; ?>" class="trash"><i class="fa fa-trash"></i></a>
@@ -191,8 +191,8 @@ if(isset($_POST['form1'])) {
                         </tr>
                         <?php endfor; ?>
                         <tr>
-                            <th colspan="7" class="total-text">Total</th>
-                            <th class="total-amount"><?php echo LANG_VALUE_1; ?><?php echo $table_total_price; ?></th>
+                            <th colspan="7" class="total-text">Tổng cộng</th>
+                            <th class="total-amount"><?php echo $table_total_price; ?>.000 VNĐ</th>
                             <th></th>
                         </tr>
                     </table> 
@@ -200,9 +200,9 @@ if(isset($_POST['form1'])) {
 
                 <div class="cart-buttons">
                     <ul>
-                        <li><input type="submit" value="<?php echo LANG_VALUE_20; ?>" class="btn btn-primary" name="form1"></li>
-                        <li><a href="index.php" class="btn btn-primary"><?php echo LANG_VALUE_85; ?></a></li>
-                        <li><a href="checkout.php" class="btn btn-primary"><?php echo LANG_VALUE_23; ?></a></li>
+                        <li><input type="submit" value="Cập nhật giỏ hàng" class="btn btn-primary" name="form1"></li>
+                        <li><a href="index.php" class="btn btn-primary">Thông tin giao hàng</a></li>
+                        <li><a href="checkout.php" class="btn btn-primary">Thanh toán</a></li>
                     </ul>
                 </div>
                 </form>

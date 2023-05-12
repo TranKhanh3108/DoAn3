@@ -602,7 +602,7 @@ Mobile style's
 
 .product .out-of-stock .inner {
     display: inline-block;
-    background: #0d1452;
+    background: #023401;
     color: #fff;
     font-size: 14px;
     padding: 6px 10px;
@@ -615,7 +615,7 @@ Mobile style's
 }
 
 .product .text p a:hover {
-    background: #333;
+    background:#d2c100;
 }
 
 .product .item .thumb {
@@ -1084,7 +1084,7 @@ ul.nav-tabs {
     line-height: 30px;
     font-size: 20px;
     font-weight: 700;
-    color: #333;
+    color: #d2c100;
     margin-bottom: 20px;
 }
 
@@ -1188,7 +1188,8 @@ ul.nav-tabs {
 }
 
 .page-banner h1 {
-    color: #fff;
+    color: #d2c100;
+    font-size: 100px;
     text-align: center;
     z-index: 999;
     position: relative;
@@ -2060,14 +2061,14 @@ div.pagination span.disabled {
     float: left;
     list-style-type: none;
     margin-right: 10px;
-    color: #0d1452;
+    color: #023401;
 }
 .breadcrumb ul li:last-child {
     color: #333;
 }
 
 .breadcrumb ul li a {
-    color: #0d1452;
+    color:#023401;
 }
 
 .bs-slider .item {
@@ -2079,7 +2080,7 @@ div.pagination span.disabled {
 
 .home-newsletter {
     padding: 80px 0;
-    background: #0d1452;
+    background: #023401;
 }
 
 .home-newsletter .single {

@@ -37,7 +37,7 @@ if(isset($_POST['form1'])) {
                     $error_message .= LANG_VALUE_148.'<br>';
                 } else {
                     $_SESSION['customer'] = $row;
-                    header("location: ".BASE_URL."dashboard.php");
+                    header("location: ".BASE_URL."index.php");
                 }
             }
             
@@ -74,7 +74,7 @@ if(isset($_POST['form1'])) {
                                     <input type="email" class="form-control" name="cust_email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Mật khẩuss*</label>
+                                    <label for="">Mật khẩu*</label>
                                     <input type="password" class="form-control" name="cust_password">
                                 </div>
                                 <div class="form-group">
