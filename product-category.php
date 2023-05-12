@@ -155,7 +155,7 @@ if (!isset($_REQUEST['id']) || !isset($_REQUEST['type'])) {
                         endfor;
 
                         if ($prod_count == 0) {
-                            echo '<div class="pl_15">' . LANG_VALUE_153 . '</div>';
+                            echo '<div class="pl_15">Không có mặt hàng nào</div>';
                         } else {
                             for ($ii = 0; $ii < count($final_ecat_ids); $ii++) {
                                 $statement = $pdo->prepare("SELECT * FROM tbl_product WHERE ecat_id=? AND p_is_active=?");
@@ -182,7 +182,7 @@ if (!isset($_REQUEST['id']) || !isset($_REQUEST['type'])) {
                                                 <?php if ($row['p_qty'] == 0) : ?>
                                                     <div class="out-of-stock">
                                                         <div class="inner">
-                                                            Out Of Stock
+                                                            Hết hàng!
                                                         </div>
                                                     </div>
                                                 <?php else : ?>
