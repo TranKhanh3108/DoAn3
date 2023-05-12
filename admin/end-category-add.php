@@ -6,17 +6,17 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
+        $error_message .= "Phải chọn loại mặt hàng chính<br>";
     }
 
     if(empty($_POST['mcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a mid level category<br>";
+        $error_message .= "Phải chọn loại mặt hàng phụ<br>";
     }
 
     if(empty($_POST['ecat_name'])) {
         $valid = 0;
-        $error_message .= "End level category name can not be empty<br>";
+        $error_message .= "Tên loại mặt hàng liên quan không được để rỗng<br>";
     }
 
     if($valid == 1) {
@@ -25,17 +25,17 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("INSERT INTO tbl_end_category (ecat_name,mcat_id) VALUES (?,?)");
 		$statement->execute(array($_POST['ecat_name'],$_POST['mcat_id']));
 	
-    	$success_message = 'End Level Category is added successfully.';
+    	$success_message = 'Loại mặt hàng liên quan được thêm thành công.';
     }
 }
 ?>
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Add End Level Category</h1>
+		<h1>Thêm loại mặt hàng liên quan</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="end-category.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="end-category.php" class="btn btn-primary btn-sm">Danh sách loại mặt hàng liên quan</a>
 	</div>
 </section>
 
@@ -66,10 +66,10 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Top Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Loại mặt hàng chính <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="tcat_id" class="form-control select2 top-cat">
-									<option value="">Select Top Level Category</option>
+									<option value="">Chọn loại mặt hàng chính</option>
 									<?php
 									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
 									$statement->execute();
@@ -84,15 +84,15 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Mid Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Loại mặt hàng phụ <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="mcat_id" class="form-control select2 mid-cat">
-									<option value="">Select Mid Level Category</option>
+									<option value="">Chọn loại mặt hàng phụ</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Tên loại mặt hàng liên quan <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="ecat_name">
 							</div>
@@ -101,7 +101,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">Xác nhận</button>
 							</div>
 						</div>
 					</div>
