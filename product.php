@@ -179,7 +179,7 @@ if(isset($_POST['form_add_to_cart'])) {
             }
         }
         if($added == 1) {
-           $error_message1 = 'This product is already added to the shopping cart.';
+           $error_message1 = 'Mặt hàng đã có trong giỏ hàng.';
         } else {
 
             $i=0;
@@ -228,7 +228,7 @@ if(isset($_POST['form_add_to_cart'])) {
             $_SESSION['cart_p_name'][$new_key] = $_POST['p_name'];
             $_SESSION['cart_p_featured_photo'][$new_key] = $_POST['p_featured_photo'];
 
-            $success_message1 = 'Product is added to the cart successfully!';
+            $success_message1 = 'Mặt hàng đã được thêm vào giỏ hàng!';
         }
         
     }
@@ -274,7 +274,7 @@ if(isset($_POST['form_add_to_cart'])) {
         $_SESSION['cart_p_name'][1] = $_POST['p_name'];
         $_SESSION['cart_p_featured_photo'][1] = $_POST['p_featured_photo'];
 
-        $success_message1 = 'Product is added to the cart successfully!';
+        $success_message1 = 'Mặt hàng đã được thêm vào giỏ hàng!';
     }
 	endif;
 }
@@ -414,7 +414,7 @@ if($success_message1 != '') {
                                 <div class="row">
                                     <?php if(isset($size)): ?>
                                     <div class="col-md-12 mb_20">
-                                        <?php echo LANG_VALUE_52; ?> <br>
+                                        Kích thước <br>
                                         <select name="size_id" class="form-control select2" style="width:auto;">
                                             <?php
                                             $statement = $pdo->prepare("SELECT * FROM tbl_size");
@@ -434,7 +434,7 @@ if($success_message1 != '') {
 
                                     <?php if(isset($color)): ?>
                                     <div class="col-md-12">
-                                        <?php echo LANG_VALUE_53; ?> <br>
+                                        Màu sắc <br>
                                         <select name="color_id" class="form-control select2" style="width:auto;">
                                             <?php
                                             $statement = $pdo->prepare("SELECT * FROM tbl_color");
@@ -456,27 +456,27 @@ if($success_message1 != '') {
                                 
                             </div>
 							<div class="p-price">
-                                <span style="font-size:14px;"><?php echo LANG_VALUE_54; ?></span><br>
+                                <span style="font-size:14px;">Giá sản phẩm</span><br>
                                 <span>
                                     <?php if($p_old_price!=''): ?>
-                                        <del><?php echo $p_old_price; ?>đ</del>
+                                        <del><?php echo $p_old_price; ?> VNĐ</del>
                                     <?php endif; ?> 
-                                        <?php echo $p_current_price; ?>đ
+                                        <?php echo $p_current_price; ?> VNĐ
                                 </span>
                             </div>
                             <input type="hidden" name="p_current_price" value="<?php echo $p_current_price; ?>">
                             <input type="hidden" name="p_name" value="<?php echo $p_name; ?>">
                             <input type="hidden" name="p_featured_photo" value="<?php echo $p_featured_photo; ?>">
 							<div class="p-quantity">
-                                <?php echo LANG_VALUE_55; ?> <br>
+                                Số lượng <br>
 								<input type="number" class="input-text qty" step="1" min="1" max="" name="p_qty" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric">
 							</div>
 							<div class="btn-cart btn-cart1">
-                                <input type="submit" value="<?php echo LANG_VALUE_154; ?>" name="form_add_to_cart">
+                                <input type="submit" value="Thêm vào giỏ hàng" name="form_add_to_cart">
 							</div>
                             </form>
 							<div class="share">
-                                <?php echo LANG_VALUE_58; ?> <br>
+                                Chia sẻ<br>
 								<div class="sharethis-inline-share-buttons"></div>
 							</div>
 						</div>
@@ -486,11 +486,10 @@ if($success_message1 != '') {
 						<div class="col-md-12">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab"><?php echo LANG_VALUE_59; ?></a></li>
-								<li role="presentation"><a href="#feature" aria-controls="feature" role="tab" data-toggle="tab"><?php echo LANG_VALUE_60; ?></a></li>
-                                <li role="presentation"><a href="#condition" aria-controls="condition" role="tab" data-toggle="tab"><?php echo LANG_VALUE_61; ?></a></li>
-                                <li role="presentation"><a href="#return_policy" aria-controls="return_policy" role="tab" data-toggle="tab"><?php echo LANG_VALUE_62; ?></a></li>
-                               <!-- <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab"><?php echo LANG_VALUE_63; ?></a></li> -->
+								<li role="presentation" class="active"><a href="#description" aria-controls="description" role="tab" data-toggle="tab">Mô tả sản phẩm</a></li>
+								<li role="presentation"><a href="#feature" aria-controls="feature" role="tab" data-toggle="tab">Tính năng</a></li>
+                                <li role="presentation"><a href="#condition" aria-controls="condition" role="tab" data-toggle="tab">Tình trạng</a></li>
+                                <li role="presentation"><a href="#return_policy" aria-controls="return_policy" role="tab" data-toggle="tab">Chính sách hoàn trả</a></li>
 							</ul>
 
 							<!-- Tab panes -->
@@ -657,8 +656,8 @@ if($success_message1 != '') {
         <div class="row">
             <div class="col-md-12">
                 <div class="headline">
-                    <h2><?php echo LANG_VALUE_155; ?></h2>
-                    <h3><?php echo LANG_VALUE_156; ?></h3>
+                    <h2>Mặt hàng liên quan</h2>
+                    <h3>Xem các mặt hàng liên quan phía dưới!</h3>
                 </div>
             </div>
         </div>
@@ -681,10 +680,10 @@ if($success_message1 != '') {
                             <div class="text">
                                 <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                 <h4>
-                                    <?php echo LANG_VALUE_1; ?><?php echo $row['p_current_price']; ?> 
+                                    <?php echo $row['p_current_price']; ?> VNĐ
                                     <?php if($row['p_old_price'] != ''): ?>
                                     <del>
-                                        <?php echo LANG_VALUE_1; ?><?php echo $row['p_old_price']; ?>
+                                        <?php echo $row['p_old_price']; ?> VNĐ
                                     </del>
                                     <?php endif; ?>
                                 </h4>
@@ -757,7 +756,7 @@ if($success_message1 != '') {
                                     }
                                     ?>
                                 </div>
-                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo LANG_VALUE_154; ?></a></p>
+                                <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Mua ngay</a></p>
                             </div>
                         </div>
                         <?php
