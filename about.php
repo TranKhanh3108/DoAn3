@@ -14,7 +14,7 @@ foreach ($result as $row) {
 
 <div class="page-banner" style="background-image: url(assets/uploads/about-banner.jpg">
     <div class="inner">
-        <h1><?php echo $about_title; ?></h1>
+        <h1>Về chúng tôi</h1>
         <div></div>
     </div>
 </div>
@@ -24,7 +24,7 @@ foreach ($result as $row) {
         <div class="row">            
             <div class="col-md-12">              
                 <p>
-                    <?//php echo $about_content; ?>
+                    We HAWK!
                 </p>
 
             </div>

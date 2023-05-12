@@ -29,7 +29,7 @@ foreach ($result as $row) {
     <div class="container">
         <div class="row">            
             <div class="col-md-12">
-                <h3>Contact Form</h3>
+                <h3>Liên hệ chúng tôi</h3>
                 <div class="row cform">
                     <div class="col-md-8">
                         <div class="well well-sm">
@@ -55,20 +55,20 @@ if(isset($_POST['form_contact']))
     if(empty($_POST['visitor_name']))
     {
         $valid = 0;
-        $error_message .= 'Please enter your name.\n';
+        $error_message .= 'Hãy nhập tên.\n';
     }
 
     if(empty($_POST['visitor_phone']))
     {
         $valid = 0;
-        $error_message .= 'Please enter your phone number.\n';
+        $error_message .= 'Hãy nhập số điện thoại.\n';
     }
 
 
     if(empty($_POST['visitor_email']))
     {
         $valid = 0;
-        $error_message .= 'Please enter your email address.\n';
+        $error_message .= 'Hãy nhập đianj chỉ email.\n';
     }
     else
     {
@@ -76,14 +76,14 @@ if(isset($_POST['form_contact']))
         if(!filter_var($_POST['visitor_email'], FILTER_VALIDATE_EMAIL))
         {
             $valid = 0;
-            $error_message .= 'Please enter a valid email address.\n';
+            $error_message .= 'Hãy nhập một địa chỉ email hợp lệ.\n';
         }
     }
 
     if(empty($_POST['visitor_message']))
     {
         $valid = 0;
-        $error_message .= 'Please enter your message.\n';
+        $error_message .= 'Hãy nhập tin nhắn.\n';
     }
 
     if($valid == 1)
@@ -149,21 +149,21 @@ if(isset($_POST['form_contact']))
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">Name</label>
+                                        <label for="name">Tên</label>
                                         <input type="text" class="form-control" name="visitor_name" placeholder="Enter name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Email Address</label>
+                                        <label for="email">Email</label>
                                         <input type="email" class="form-control" name="visitor_email" placeholder="Enter email address">
                                     </div>
                                     <div class="form-group">
-                                        <label for="email">Phone Number</label>
+                                        <label for="email">Số điện thoại</label>
                                         <input type="text" class="form-control" name="visitor_phone" placeholder="Enter phone number">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">Message</label>
+                                        <label for="name">Tin nhắn</label>
                                         <textarea name="visitor_message" class="form-control" rows="9" cols="25" placeholder="Enter message"></textarea>
                                     </div>
                                 </div>
@@ -175,12 +175,12 @@ if(isset($_POST['form_contact']))
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                        <legend><span class="glyphicon glyphicon-globe"></span>Liên hệ trực tiếp</legend>
                         <address>
                             <?php echo nl2br($contact_address); ?>
                         </address>
                         <address>
-                            <strong>Phone:</strong><br>
+                            <strong>Số điện thoại:</strong><br>
                             <span><?php echo $contact_phone; ?></span>
                         </address>
                         <address>
@@ -190,9 +190,6 @@ if(isset($_POST['form_contact']))
                     </div>
                 </div>
 
-                <h3>Find Us On Map</h3>
-                <?php echo $contact_map_iframe; ?>
-                
             </div>
         </div>
     </div>
