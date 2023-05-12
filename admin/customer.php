@@ -14,13 +14,13 @@
 					<table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th width="30">SL</th>
-								<th width="180">Name</th>
-								<th width="180">Email Address</th>
-								<th width="180">Country, City, State</th>
-								<th>Status</th>
-								<th width="100">Change Status</th>
-								<th width="100">Action</th>
+								<th width="30">STT</th>
+								<th width="180">Tên</th>
+								<th width="180">Email</th>
+								<th width="180">Quốc tịch, Thành Phố, Phường</th>
+								<th>Trạng thái</th>
+								<th width="100">Kích hoạt</th>
+								<th width="100">Khác</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -47,7 +47,7 @@
 									</td>
 									<td><?php if($row['cust_status']==1) {echo 'Active';} else {echo 'Inactive';} ?></td>
 									<td>
-										<a href="customer-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Change Status</a>
+										<a href="customer-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Trạng th</a>
 									</td>
 									<td>
 										<a href="#" class="btn btn-danger btn-xs" data-href="customer-delete.php?id=<?php echo $row['cust_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
@@ -72,14 +72,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Xóa dữ liệu</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
+                <p>Bạn có chắc muốn xóa</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                <a class="btn btn-danger btn-ok">Xóa</a>
             </div>
         </div>
     </div>
