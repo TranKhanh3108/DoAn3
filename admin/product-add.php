@@ -226,31 +226,31 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Product Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">tên sản phẩm <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_name" class="form-control">
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Old Price <br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">giá cũ <br><span style="font-size:10px;font-weight:normal;">(vnd)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_old_price" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<label for="" class="col-sm-3 control-label">giá hiện tại <span>*</span><br><span style="font-size:10px;font-weight:normal;">(vnd)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_current_price" class="form-control">
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Quantity <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">số lượng <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_qty" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Select Size</label>
+							<label for="" class="col-sm-3 control-label">chọn cỡ</label>
 							<div class="col-sm-4">
 								<select name="size[]" class="form-control select2" multiple="multiple">
 									<?php
@@ -267,7 +267,7 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Select Color</label>
+							<label for="" class="col-sm-3 control-label">chọn màu</label>
 							<div class="col-sm-4">
 								<select name="color[]" class="form-control select2" multiple="multiple">
 									<?php
@@ -360,7 +360,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+								<button type="submit" class="btn btn-success pull-left" name="form1">xác nhận</button>
 							</div>
 						</div>
 					</div>
