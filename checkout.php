@@ -126,16 +126,17 @@ if(!isset($_SESSION['cart_p_id'])) {
                             <td><?php echo $arr_cart_p_qty[$i]; ?></td>
                             <td class="text-right">
                                 <?php
-                                $row_total_price = $arr_cart_p_current_price[$i]*$arr_cart_p_qty[$i];
+                                $temp = str_replace('.', '', $arr_cart_p_current_price[$i]);
+                                $row_total_price = $temp * $arr_cart_p_qty[$i] ;
                                 $table_total_price = $table_total_price + $row_total_price;
                                 ?>
-                                <?php echo $row_total_price; ?>.000đ
+                                <?php echo number_format($row_total_price, 0, ",", "."); ?>đ
                             </td>
                         </tr>
                         <?php endfor; ?>           
                         <tr>
                             <th colspan="7" class="total-text"><?php echo LANG_VALUE_81; ?></th>
-                            <th class="total-amount"><?php echo $table_total_price; ?>.000đ</th>
+                            <th class="total-amount"><?php echo number_format($table_total_price, 0, ",", "."); ?>đ</th>
                         </tr>
                         <?php
                         $statement = $pdo->prepare("SELECT * FROM tbl_shipping_cost WHERE country_id=?");
@@ -157,7 +158,7 @@ if(!isset($_SESSION['cart_p_id'])) {
                         ?>
                         <tr>
                             <td colspan="7" class="total-text"><?php echo LANG_VALUE_84; ?></td>
-                            <td class="total-amount"><?php echo $shipping_cost; ?>0đ</td>
+                            <td class="total-amount"><?php echo number_format($shipping_cost, 0, ",", "."); ?>đ</td>
                         </tr>
                         <tr>
                             <th colspan="7" class="total-text"><?php echo LANG_VALUE_82; ?></th>
@@ -165,7 +166,7 @@ if(!isset($_SESSION['cart_p_id'])) {
                                 <?php
                                 $final_total = $table_total_price+$shipping_cost;
                                 ?>
-                                <?php echo $final_total; ?>đ
+                                <?php echo number_format($final_total, 0, ",", "."); ?>đ
                             </th>
                         </tr>
                     </table> 
