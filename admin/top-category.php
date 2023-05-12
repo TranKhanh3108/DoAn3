@@ -75,7 +75,7 @@
             </div>
             <div class="modal-body">
                 <p>Bạn có chắc muốn xóa mục này?</p>
-                <p style="color:red;">Cảnh báo! tất cả mặt hàng, loại mặt hàng phụ và loại mặt hàng liên quan của mục sẽ bị xóa khỏi tất cả table!.</p>
+                <p style="color:red;">Cảnh báo!, tất cả mặt hàng, loại mặt hàng phụ và loại mặt hàng liên quan của mục sẽ bị xóa khỏi tất cả table!.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
