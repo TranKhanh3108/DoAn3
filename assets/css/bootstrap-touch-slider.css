@@ -213,6 +213,7 @@
     padding: 0;
     color: #ffffff;
     font-size: 100px;
+    font-family: 'UTM Avo';
     font-style: normal;
     line-height: 84px;
     margin-bottom: 30px;
@@ -252,7 +253,7 @@
 
 }
 .slide-text > a.btn-primary{
-    color: #ffffff;
+    color:  #d2c100;
     cursor: pointer;
     font-weight: 400;
     font-size: 13px;
@@ -262,7 +263,7 @@
     padding: 17px 30px;
     white-space: nowrap;
     letter-spacing: 1px;
-    background: #e4144d;
+    background: #023401;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
