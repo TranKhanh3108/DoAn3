@@ -259,7 +259,7 @@ if (isset($_POST['form1'])) {
                                     <input type="text" class="form-control" name="cust_state" value="<?php if(isset($_POST['cust_state'])){echo $_POST['cust_state'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <label for=""><?php echo LANG_VALUE_109; ?> *</label>
+                                    <label for="">Zip code *</label>
                                     <input type="text" class="form-control" name="cust_zip" value="<?php if(isset($_POST['cust_zip'])){echo $_POST['cust_zip'];} ?>">
                                 </div>
                                 <div class="col-md-6 form-group">

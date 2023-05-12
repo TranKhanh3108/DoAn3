@@ -18,7 +18,7 @@ $dbuser = 'root';
 $dbpass = 'mysql';
 
 // Defining base url
-define("BASE_URL", "http://localhost/test/DoAn2");
+define("BASE_URL", "http://localhost/test/DoAn2/");
 
 // Getting Admin url
 define("ADMIN_URL", BASE_URL . "admin" . "/");

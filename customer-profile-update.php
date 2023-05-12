@@ -96,7 +96,7 @@ if (isset($_POST['form1'])) {
             <div class="col-md-12">
                 <div class="user-content">
                     <h3>
-                        <?php echo LANG_VALUE_117; ?>
+                       Cập nhật thông tin
                     </h3>
                     <?php
                     if($error_message != '') {
