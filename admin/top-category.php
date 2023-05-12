@@ -5,7 +5,7 @@
 		<h1>View Top Level Categories</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="top-category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="top-category-add.php" class="btn btn-primary btn-sm">thêm mới</a>
 	</div>
 </section>
 
@@ -25,7 +25,7 @@
 			        <th>SL</th>
 			        <th>Top Category Name</th>
                     <th>Show on Menu?</th>
-			        <th>Action</th>
+			        <th>hành động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -50,8 +50,8 @@
                             ?>
                         </td>
 	                    <td>
-	                        <a href="top-category-edit.php?id=<?php echo $row['tcat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="top-category-delete.php?id=<?php echo $row['tcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="top-category-edit.php?id=<?php echo $row['tcat_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="top-category-delete.php?id=<?php echo $row['tcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>
 	                    </td>
 	                </tr>
             		<?php

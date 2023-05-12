@@ -856,7 +856,7 @@ INSERT INTO `tbl_service` (`id`, `title`, `content`, `photo`) VALUES
 --
 -- Cấu trúc bảng cho bảng `tbl_settings`
 --
-
+SET GLOBAL innodb_strict_mode = 0;
 CREATE TABLE `tbl_settings` (
   `id` int(11) NOT NULL,
   `logo` varchar(255) NOT NULL,

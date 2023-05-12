@@ -5,7 +5,7 @@
 		<h1>View Sizes</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="size-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="size-add.php" class="btn btn-primary btn-sm">thêm mới</a>
 	</div>
 </section>
 
@@ -23,8 +23,8 @@
 			<thead>
 			    <tr>
 			        <th>SL</th>
-			        <th>Size Name</th>
-			        <th>Action</th>
+			        <th>kích cỡ</th>
+			        <th>hành động</th>
 			    </tr>
 			</thead>
             <tbody>
@@ -40,8 +40,8 @@
 	                    <td><?php echo $i; ?></td>
 	                    <td><?php echo $row['size_name']; ?></td>
 	                    <td>
-	                        <a href="size-edit.php?id=<?php echo $row['size_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="size-delete.php?id=<?php echo $row['size_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="size-edit.php?id=<?php echo $row['size_id']; ?>" class="btn btn-primary btn-xs">sửa</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="size-delete.php?id=<?php echo $row['size_id']; ?>" data-toggle="modal" data-target="#confirm-delete">xóa</a>
 	                    </td>
 	                </tr>
             		<?php
