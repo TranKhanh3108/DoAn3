@@ -173,10 +173,10 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                                             <div class="text">
                                                 <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
                                                 <h4>
-                                                    <?php echo LANG_VALUE_1; ?><?php echo $row['p_current_price']; ?> 
+                                                    <?php echo $row['p_current_price'];?>đ
                                                     <?php if($row['p_old_price'] != ''): ?>
                                                     <del>
-                                                        <?php echo LANG_VALUE_1; ?><?php echo $row['p_old_price']; ?>
+                                                        <?php echo $row['p_old_price']; ?>đ
                                                     </del>
                                                     <?php endif; ?>
                                                 </h4>
@@ -256,7 +256,7 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                                                         </div>
                                                     </div>
                                                 <?php else: ?>
-                                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo LANG_VALUE_154; ?></a></p>
+                                                    <p><a href="product.php?id=<?php echo $row['p_id']; ?>">Mua ngay</a></p>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
