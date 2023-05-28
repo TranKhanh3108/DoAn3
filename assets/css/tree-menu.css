@@ -1,9 +1,9 @@
-/* MENU-LEFT
+/* MENU-TRÁI
 -------------------------- */
-/* layout */
+/* Giao Diện*/
 #left ul.nav {
     margin-bottom: 2px;
-    font-size: 12px; /* to change font-size, please change instead .lbl */
+    font-size: 12px; 
 }
 #left ul.nav ul li {
 
@@ -82,7 +82,7 @@
     font-size: 16px;
 }
 
-/* THEMATIQUE
+
 ------------------------- */
 /* theme 1 */
 #left ul.nav>li.item-1.parent>a {
@@ -101,7 +101,7 @@
     color: #fff!important;
 }
 
-/* theme 2 */
+
 #left ul.nav {
     background: #fff;
 }
@@ -129,7 +129,7 @@
     color: #fff!important;
 }
 
-/* theme 3 */
+
 #left ul.nav>li.item-15.parent>a {
     border: solid 1px #94cf00;
 }
@@ -146,7 +146,7 @@
     color: #fff!important;
 }
 
-/* theme 4 */
+
 #left ul.nav>li.item-22.parent>a {
     border: solid 1px #023401;
 }
